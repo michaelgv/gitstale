@@ -36,7 +36,7 @@ for branch in `git branch -r --merged | grep -v HEAD`; do
 		if [ "$INPUT_PERIOD" == "year" ]; then
 			echo $BRANCH_NAME_NOORIGIN
 		fi
-		if  [ "$INPUT_AMOUNT" -gt "3" ]; then
+		if  [ "$INPUT_AMOUNT" -gt "$TIMELIMIT" ]; then
 			echo $BRANCH_NAME_NOORIGIN
 		fi
 	fi
